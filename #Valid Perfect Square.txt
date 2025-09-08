@@ -1,0 +1,10 @@
+#Valid Perfect Square
+
+bool isPerfectSquare(int num) {
+    if(num<0)
+    {
+        return 0;
+    }
+    int sqrtnum=(int)sqrt(num);
+    return (sqrtnum*sqrtnum==num);
+}
