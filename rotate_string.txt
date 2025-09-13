@@ -1,0 +1,17 @@
+int rotateString(char *s, char *goal) {
+    int lenS = strlen(s);
+    int lenGoal = strlen(goal);
+
+    // If the lengths are different, it's impossible to rotate s to goal
+    if (lenS != lenGoal) {
+        return 0;
+    }
+
+    // Concatenate s with itself
+    char doubled[lenS * 2 + 1];
+    strcpy(doubled, s);
+    strcat(doubled, s);
+
+    // Check if goal is a substring of the concatenated string
+    return strstr(doubled, goal) != NULL;
+}
